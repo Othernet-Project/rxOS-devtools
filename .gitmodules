@@ -2,3 +2,6 @@
 	path = buildroot
 	url = https://github.com/Outernet-Project/buildroot.git
 	branch = outernet
+[submodule "overlay/package"]
+	path = overlay/package
+	url = https://github.com/Outernet-Project/buildroot-packages.git
