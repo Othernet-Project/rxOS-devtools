@@ -2,10 +2,11 @@
 
 set -e
 
+OVERLAY_NAME="$2"
 DEDUPE_SCRIPT="$BR2_EXTERNAL/scripts/dedupe.py"
 DELETE_LIST="$BR2_EXTERNAL/configs/delete_list.txt"
 ROOTFS_TARBALL="$BINARIES_DIR/rootfs.tar"
-OUTPUT="$BINARIES_DIR/rootfs.squahsfs"
+OUTPUT="$BINARIES_DIR/overlay-${OVERLAY_NAME}.sqfs"
 UNPACK_DIR="/tmp/overlay-$(date +%s)"
 
 mkdir -p "$UNPACK_DIR"
