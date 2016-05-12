@@ -3,5 +3,17 @@ config RXOS_OVERLAY_NAME
 	help
 	  Name of the overlay that will be used in the
 	  output file. The overlay file name will be 
-	  overlay-<name>.sqfs. Do not include spaces
-	  in the name.
+	  overlay-<name>-<version>.sqfs. 
+	  
+	  DO NOT INCLUDE SPACES OR DASHES IN THE NAME.
+
+
+config RXOS_OVERLAY_VERSION
+	string "Overlay version"
+	help
+	  Version of the overlay that will be used in the
+	  output file. The overlay file name will be 
+	  overlay-<name>-<version>.sqfs. If the version
+	  is left blank, current date will be used instead.
+
+	  DO NOT INCLUDE SPACES OR DASHES IN THE VERSION.
