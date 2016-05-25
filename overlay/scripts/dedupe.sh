@@ -8,7 +8,7 @@ DEDUPE_SCRIPT="$BR2_EXTERNAL/scripts/dedupe.py"
 DELETE_LIST="$BR2_EXTERNAL/configs/delete_list.txt"
 ROOTFS_TARBALL="$BINARIES_DIR/rootfs.tar"
 OUTPUT="$BINARIES_DIR/overlay-${OVERLAY_NAME}-${OVERLAY_VERSION}.sqfs"
-UNPACK_DIR="/tmp/overlay-$(date +%s)"
+UNPACK_DIR="$(mktemp -d /tmp/overlay-XXXXXXX)"
 
 mkdir -p "$UNPACK_DIR"
 tar -xvf "$ROOTFS_TARBALL" -C "$UNPACK_DIR"
